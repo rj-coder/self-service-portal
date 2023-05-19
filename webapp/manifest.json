@@ -7,14 +7,13 @@
 		"applicationVersion": {
 			"version": "1.0.0"
 		},
-		"title": "{{appTitle}}",
-		"description": "{{appDescription}}",
+		"title": "Self Service Portal",
+		"description": "a self service portal for SAP ID password reset",
 		"sourceTemplate": {
 			"id": "ui5template.basicSAPUI5ApplicationProject",
 			"version": "1.40.12"
 		}
 	},
-
 	"sap.ui": {
 		"technology": "UI5",
 		"icons": {
@@ -32,11 +31,9 @@
 		},
 		"supportedThemes": [
 			"sap_hcb",
-			"sap_belize"
-
+			"sap_bluecrystal"
 		]
 	},
-
 	"sap.ui5": {
 		"rootView": {
 			"viewName": "zpwdrst.view.View1",
@@ -45,12 +42,15 @@
 		"dependencies": {
 			"minUI5Version": "1.30.0",
 			"libs": {
-				"sap.ui.core": {},
+				"sap.collaboration": {},
+				"sap.f": {
+					"minVersion": ""
+				},
 				"sap.m": {},
+				"sap.ui.comp": {},
+				"sap.ui.core": {},
 				"sap.ui.layout": {},
 				"sap.ushell": {},
-				"sap.collaboration": {},
-				"sap.ui.comp": {},
 				"sap.uxap": {}
 			}
 		},
@@ -67,9 +67,11 @@
 			}
 		},
 		"resources": {
-			"css": [{
-				"uri": "css/style.css"
-			}]
+			"css": [
+				{
+					"uri": "css/style.css"
+				}
+			]
 		}
 	}
 }

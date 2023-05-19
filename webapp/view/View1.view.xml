@@ -1,9 +1,19 @@
 <mvc:View controllerName="zpwdrst.controller.View1" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
-	displayBlock="true" xmlns="sap.m">
+	displayBlock="true" xmlns="sap.m" xmlns:f="sap.ui.layout.form" xmlns:c="sap.ui.core">
 	<App>
 		<pages>
 			<Page title="{i18n>title}">
-				<content></content>
+				<content>
+					<f:SimpleForm class="sapUiTinyMarginTop" title="{i18n>resetFormTitle}" layout="GridLayout" columnsM="2">
+						<f:title>
+							<c:Title text="{i18n>resetFormTitle}"  emphasized="true"></c:Title>
+						</f:title>
+						<f:content>
+							<Label text="SAP/ESS ID" required="true" labelFor="_sapId" class="sapUiSmallMarginTop"  />
+							<Input id="_sapId" />
+						</f:content>
+					</f:SimpleForm>
+				</content>
 			</Page>
 		</pages>
 	</App>
